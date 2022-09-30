@@ -10,6 +10,8 @@ public static void main(String[] args){
     String vitoria="";
     Scanner scan=new Scanner(System.in);
 
+    iniciarjogo(velha);
+
     while(game){
         desenhajogo(velha);
         vitoria=verificarvitoria(velha);
@@ -63,12 +65,20 @@ public static int[] jogar(Scanner scan,char sa){
 }
 
 
-public void Boolean verificarjogada(campo[][]velha,int p[],char simboloAtual){
+public static Boolean verificarjogada(campo[][]velha,int p[],char simboloAtual){
     if (velha[p[0]][p[1]].getsimbolo()==' ') {
         velha[p[0]][p[1]].setsimbolo(simboloAtual);
         return true;
     }else{
         return false;
+    }
+}
+
+public static void iniciarjogo(campo[][]velha){
+    for(int 1=0;1<3;1++){
+        for(int c=0;c<3;c++){
+            velha[1][c]=new campo();
+        }
     }
 }
 
