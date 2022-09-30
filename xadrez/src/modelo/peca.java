@@ -36,5 +36,21 @@ public abstract class peca{
         this.imagem = imagem;
     }
 
+    public void setTabuleiro(tabuleiro tabuleiro){
+        this.tabuleiro = tabuleiro;
+    }
+
+    public tabuleiro getTabuleiro(){
+        return this.tabuleiro;
+    }
+
+    public boolean isSelecionada(){
+        return this.selecionada;
+    }
+
+    public void setSelecionada(boolean selecionada){
+        this.selecionada = selecionada;
+    }
+
 
 }

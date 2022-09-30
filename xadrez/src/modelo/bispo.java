@@ -1,8 +1,9 @@
 package modelo;
 
 public class bispo extends peca{
-    
-    public bispo(EnumCor, int linha, int coluna, String imagem){
+
+
+    public bispo(EnumCor cor, int linha, int coluna, String imagem){
         super(cor, linha, coluna, imagem);
     }
 

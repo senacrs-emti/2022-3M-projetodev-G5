@@ -1,9 +1,9 @@
 package modelo;
 
-public class cavalo extends peca{
+public class rei extends peca{
 
 
-    public cavalo(EnumCor cor, int linha, int coluna, String imagem){
+    public rei(EnumCor cor, int linha, int coluna, String imagem){
         super(cor, linha, coluna, imagem);
     }
 

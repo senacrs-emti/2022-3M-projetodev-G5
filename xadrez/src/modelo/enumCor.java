@@ -1,6 +1,6 @@
 package modelo;
 
-public enum enumCor{
+public enum EnumCor{
 
     PRETO,
     BRANCO;
