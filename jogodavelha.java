@@ -2,41 +2,8 @@ import java.util.Scanner;
 
 
 public class jogodavelha{
-public static void main(String[] args){
 
-    campo[][] velha=new campo[3][3];
-    char simboloAtual='X';
-    Boolean game=true;
-    String vitoria="";
-    Scanner scan=new Scanner(System.in);
-
-    iniciarjogo(velha);
-
-    while(game){
-        desenhajogo(velha);
-        vitoria=verificarvitoria(velha);
-        if(!vitoria.equals("")){
-            System.out.printf("Jogador %s venceu%n",vitoria);
-            break;
-        }
-        try{
-            if (verificarjogada(velha,jogar(scan,simboloAtual),simboloAtual)) {
-                if(simboloAtual=='X'){
-                    simboloAtual='O';
-                }else{
-                    simboloAtual='X';
-                }
-                
-            }
-
-        }catch(Exception e){
-            System.out.printf("Erro");
-
-        }
-    }
-    System.out.printf("Fim de jogo");
-}
-
+    
 
 public static void desenhajogo(campo[][] velha){
     limpartela();
@@ -75,9 +42,9 @@ public static Boolean verificarjogada(campo[][]velha,int p[],char simboloAtual){
 }
 
 public static void iniciarjogo(campo[][]velha){
-    for(int 1=0;1<3;1++){
+    for(int i=0;i<3;i++){
         for(int c=0;c<3;c++){
-            velha[1][c]=new campo();
+            velha[i][c]=new campo();
         }
     }
 }
@@ -85,4 +52,41 @@ public static void iniciarjogo(campo[][]velha){
 public static String verificavitoria(campo[][]velha){
     return "";
 }
+
+
+public static void main(String[] args){
+
+    campo[][] velha=new campo[3][3];
+    char simboloAtual='X';
+    Boolean game=true;
+    String vitoria="";
+    Scanner scan=new Scanner(System.in);
+
+    iniciarjogo(velha);
+
+    while(game){
+        desenhajogo(velha);
+        vitoria = verificavitoria(velha);
+        if(!vitoria.equals("")){
+            System.out.printf("Jogador %s venceu%n",vitoria);
+            break;
+        }
+        try{
+            if (verificarjogada(velha,jogar(scan,simboloAtual),simboloAtual)) {
+                if(simboloAtual=='X'){
+                    simboloAtual='O';
+                }else{
+                    simboloAtual='X';
+                }
+                
+            }
+
+        }catch(Exception e){
+            System.out.printf("Erro");
+
+        }
+    }
+    System.out.printf("Fim de jogo");
+}
+
 }
