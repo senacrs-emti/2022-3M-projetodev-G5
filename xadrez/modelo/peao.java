@@ -1,9 +1,10 @@
 package modelo;
 
-public class torre extends peca{
+public class peao extends peca{
 
+    private boolean primeiroMovimento = true;
 
-    public torre(EnumCor cor, int linha, int coluna, String imagem){
+    public peao(EnumCor cor, int linha, int coluna, String imagem){
         super(cor, linha, coluna, imagem);
     }
 

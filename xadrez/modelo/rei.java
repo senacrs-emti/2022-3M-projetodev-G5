@@ -1,10 +1,9 @@
 package modelo;
 
-public class peao extends peca{
+public class rei extends peca{
 
-    private boolean primeiroMovimento = true;
 
-    public peao(EnumCor cor, int linha, int coluna, String imagem){
+    public rei(EnumCor cor, int linha, int coluna, String imagem){
         super(cor, linha, coluna, imagem);
     }
 
