@@ -27,12 +27,20 @@ public class tabuleiro {
 
     public void selecionaPeca(peca peca){
         if (peca.isSelecionada()){
+            peca.setSelecionada(false);
+            this.pecaSelecionada = null;
             
 
         }else{
+            peca.setSelecionada(true);
+            this.pecaSelecionada = peca;
 
 
         }
+    }
+
+    public void movePeca(peca peca, int novaLinha, int novaColuna){
+
     }
 
 }
