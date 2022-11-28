@@ -11,6 +11,12 @@ public class JTabuleiro extends JPanel{
 
     public JTabuleiro(tabuleiro tabuleiro){
         this.tabuleiro = tabuleiro;
+
+        private Tabuleiro tabuleiro;
+
+        public JTabuleiro(Tabuleiro tabuleiro){
+            this.tabuleiro = tabuleiro;
+        }
     }
 
 
